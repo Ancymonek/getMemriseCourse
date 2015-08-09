@@ -5,7 +5,7 @@ This works for Python 2.7 and probably also on Python 3 (try update the Print st
 
 Requests, lxml, BeautifulSoup
 
-Simply use the get_course(id) function in the download_Memrise.py file with a valid Memrise course ID.
+Simply use the get_course(id) function in the download_course.py file with a valid Memrise course ID.
 
 example output (requires Korean alphabet):
 ```
