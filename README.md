@@ -1,5 +1,5 @@
-# getMemriseCourse
-Grab a Memrise course by ID and save all words of every level into a text file
+# Download Memrise Course
+Grab a complete Memrise course by ID and save all words of every level into a text file
 
 This works for Python 2.7 and probably also on Python 3 (try update the Print statement, untested) and requires the following packages:
 
