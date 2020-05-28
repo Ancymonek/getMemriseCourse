@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_course(course_id, filename=False, collect=False, word_separator='#', line_separator=''):
+def get_course(course_id, filename=False, word_separator='#'):
     # Set collect True if all levels can be merged in a single list.
     # Optionally set a fileName, default is the course ID.
 
@@ -36,12 +36,8 @@ def get_course(course_id, filename=False, collect=False, word_separator='#', lin
                     tag.findNextSibling().next.next).text  # Take the translation, which is a sibling div and parse
                 # any html escape characters
                 course = course + word + word_separator + translation + u'\n'  # Paste word into our course
-            if not collect:
-                course = course + line_separator  # End of level, do we want an empty line to seperate levels?
 
         course = course[:-2]  # cut last empty line
-        if not collect:
-            course = course[:-2]  # cut another remaining empty line if levels were seperated
 
         # Now wrap it up and save in an utf-8 encoded text file.
         output_file = os.path.join('{}.csv'.format(filename))
