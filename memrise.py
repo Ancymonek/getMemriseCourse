@@ -3,6 +3,7 @@ import os.path
 import requests
 from bs4 import BeautifulSoup
 
+
 def get_course(course_id, filename=False, collect=False, word_separator='#', line_separator=''):
     # Set collect True if all levels can be merged in a single list.
     # Optionally set a fileName, default is the course ID.
