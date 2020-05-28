@@ -3,16 +3,6 @@ import os.path
 import requests
 from bs4 import BeautifulSoup
 
-
-# Find the ID of your course and use the function get_course(course_id).
-# The ID can be found in the URL of the course page, for example:
-#      http://www.memrise.com/course/169732/ttmik-talk-to-me-in-korean-level-3/
-#      where 169732 is the ID of this course.
-# Example use:
-# get_course(47179,'Talk To Me In Korean 1')
-# get_course(85652,'Talk To Me In Korean 2',True)
-# get_course(169732)
-
 def get_course(course_id, filename=False, collect=False, word_separator='#', line_separator=''):
     # Set collect True if all levels can be merged in a single list.
     # Optionally set a fileName, default is the course ID.
